@@ -1,0 +1,70 @@
+
+    /* General Styles */
+    body {
+        background-color: #f4f6f9;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Container Styles */
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border: 1px solid #e0e0e0;
+    }
+
+    /* Heading Styles */
+    h2 {
+        margin-bottom: 25px;
+        color: #343a40;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* Form Group Styles */
+    .form-group {
+        margin-bottom: 1.75rem;
+    }
+
+    .form-group label {
+        font-weight: 500;
+    }
+
+    /* Input and Textarea Styles */
+    .form-control {
+        border-radius: 6px;
+        border: 1px solid #ced4da;
+        padding: 10px;
+        transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    }
+
+    /* Button Styles */
+    .btn-custom {
+        background-color: #0056b3;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .btn-custom:hover {
+        background-color: #003d80;
+        transform: translateY(-2px);
+    }
+
+    .btn-custom:active {
+        background-color: #002d62;
+        transform: translateY(0);
+    }

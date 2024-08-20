@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/account_form.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Account Form</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="form-group">
+                <label for="country">District:</label>
+                <select id="country">
+            <option value="">Select Country</option>
+            <option value="kollam">Kollam</option>
+            <option value="kottayam">Kottayam</option>
+            <option value="alap">Alap</option>
+            <option value="trivandrum">Trivandrum</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">Branches:</label>
+                <select id="state" name="state">
+                    <option value="">Select Branches</option>
+                </select>
+            </div>
+
+     <button type="submit" class="btn btn-custom btn-block">Submit</button>
+<a href="{% url 'logout' %}" class="btn btn-custom btn-block">Logout</a>
+        </form>
+    </div>
+
+    <script>
+const stateObject = {
+    "kollam": ["Kottarakara", "Parippally", "Thenmala", "Karinagapally"],
+    "kottayam": ["Pala", "Erattupetta", "Vaikkom", "Kumarokam"],
+    "alap": ["Kuttanad", "Vembanad", "Ambalapuzha", "Pallichal"],
+    "trivandrum": ["Parassala", "Poovar", "Kovalam", "Pozhiyoor"]
+};
+
+document.getElementById('country').addEventListener('change', function() {
+    const country = this.value.toLowerCase();
+    const stateSelect = document.getElementById('state');
+
+    // Clear previous state options
+    stateSelect.innerHTML = '<option value="">Select Branches</option>';
+
+    if (country && stateObject[country]) {
+        // Populate states based on selected country
+        stateObject[country].forEach(function(state) {
+            const option = document.createElement('option');
+            option.value = state.toLowerCase().replace(/\s+/g, '-');
+            option.textContent = state;
+            stateSelect.appendChild(option);
+        });
+    }
+});
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

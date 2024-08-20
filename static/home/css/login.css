@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Login Container Styles */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Heading Styles */
+.login-container h2 {
+    margin-bottom: 30px;
+    color: #343a40;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+/* Input and Button Styles */
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    background-color: #003d80;
+    transform: translateY(0);
+}
+
+/* Link Styles */
+.btn-link {
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}

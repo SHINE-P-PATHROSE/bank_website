@@ -1,0 +1,176 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}">
+</head>
+<body class="p-3 m-0 border-0 bd-example" style="background-image: url('{% static 'images/bb1.jpg' %}')">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">HDFC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="branchesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Branches
+                </a>
+                <div class="dropdown-menu" aria-labelledby="branchesDropdown">
+                    <!-- TVM Dropdown -->
+                    <a class="dropdown-item dropdown-toggle" href="https://en.wikipedia.org/wiki/Thiruvananthapuram" id="tvmDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trivandrum
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="tvmDropdown">
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Poovar">Poovar</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Parassala">Parassala</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kovalam">Kovalam</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Pozhiyoor">Pozhiyoor</a>
+                    </div>
+
+                    <!-- Kollam Dropdown -->
+                    <a class="dropdown-item dropdown-toggle" href="https://en.wikipedia.org/wiki/Kollam" id="kollamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kollam
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="kollamDropdown">
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottarakkara">kottarakara</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Parippally">Parippally</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Karunagappalli">Karunagappally</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thenmala">Thenmala</a>
+                    </div>
+
+                    <!-- Alappuzha Dropdown -->
+                    <a class="dropdown-item dropdown-toggle" href="https://en.wikipedia.org/wiki/Alappuzha" id="alappuzhaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Alappuzha
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="alappuzhaDropdown">
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Mavelikkara">Mavelikkara</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Vembanad">Vembanad</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kuttanad">Kuttanad</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ambalappuzha">Ambalapuzha</a>
+                    </div>
+
+                    <!-- Kottayam Dropdown -->
+                    <a class="dropdown-item dropdown-toggle" href="https://en.wikipedia.org/wiki/Kottayam" id="kottayamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kottayam
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="kottayamDropdown">
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Erattupetta">Erattupetta</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Pala,_Kerala"> Pala</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Vaikom">Vaikkom</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kumarakom">Kumarakom</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header class="hero-section">
+    <div class="container">
+        <h1>Welcome to HDFC Bank</h1>
+        <p>Your trusted partner in financial services</p>
+        <a href="{% url 'register' %}" class="btn btn-hero">Get Started</a>
+    </div>
+</header>
+
+<section class="content-section text-center">
+    <div class="container">
+        <h2 class="mb-4">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-user"></i>
+                        <h4 class="card-title">Personal Banking</h4>
+                        <p class="card-text">Manage your personal finances with ease. Enjoy features like savings accounts, personal loans, and more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-briefcase"></i>
+                        <h4 class="card-title">Business Banking</h4>
+                        <p class="card-text">Empower your business with our banking solutions. Explore our business accounts, loans, and investment options.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line"></i>
+                        <h4 class="card-title">Investment Services</h4>
+                        <p class="card-text">Grow your wealth with our investment services. Get expert advice and choose from a range of investment options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 HDFC Bank. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+const stateObject = {
+    "kollam": ["kottarakara", "Parippally", "Thenmala", "Karinagapally"],
+    "kottayam": ["Pala", "Erattupetta", "Vaikkom", "Kumarokam"],
+    "alappuzha": ["Kuttanad", "Vembanad", "Ambalapuzha", "Mavelikara"],
+    "trivandrum": ["Parassala", "Poovar", "Kovalam", "Pozhiyoor"]
+};
+
+function updateBranches(state) {
+    const stateSelect = document.getElementById('state');
+
+    // Clear previous state options
+    stateSelect.innerHTML = '<option value="">Select Branches</option>';
+
+    if (stateObject[state]) {
+        // Populate branches based on selected state
+        stateObject[state].forEach(function(branch) {
+            const option = document.createElement('option');
+            option.value = branch.toLowerCase().replace(/\s+/g, '-');
+            option.textContent = branch;
+            stateSelect.appendChild(option);
+        });
+    }
+}
+
+document.querySelectorAll('.dropdown-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        const selectedState = this.textContent.toLowerCase().replace(/\s+/g, '-');
+        updateBranches(selectedState);
+    });
+});
+    </script>
+</body>
+</html>
